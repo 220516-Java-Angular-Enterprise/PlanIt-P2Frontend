@@ -1,0 +1,114 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+li, a, button {
+    font-weight: 500;
+    font-size: 20px;
+    color: #283618;
+    text-decoration: none;
+}
+
+  .drawnlogo {
+    max-height:100px;
+  }
+  
+  button {
+    padding: 9px 25px;
+    background-color: rgba(96, 108, 56, 1);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  button:hover {
+    background-color: rgba(96, 108, 56, 0.8);
+    transform: translate(0, -5px);
+  }
+
+  #search-input {
+    width: 250px;
+    margin: 0 20px;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  #search-input:focus {
+    border: 3px solid #555;
+  }
+
+  date-picker {
+    z-index: 2;
+  }
+
+  .destination {
+      background-color: rgb(254, 250, 224);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 200px;
+      padding-top: 20px;
+      padding-bottom: 150px;
+
+  }
+
+  .top {
+      width: 100%;
+      display:flex;
+      /* display: inline-block; */
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+  }
+
+  .middle {
+    height: 500px;
+    padding: 0px;
+  }
+
+  #map {
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    padding: 0px;
+    z-index: -1;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .bottom {
+    // padding-top: 1000px;
+    margin-top: 700px;
+    background-color: rgb(254, 250, 224);
+  }
+
+
+
+
+
