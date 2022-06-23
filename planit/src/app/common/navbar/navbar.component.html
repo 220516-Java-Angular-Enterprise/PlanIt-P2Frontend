@@ -1,15 +1,23 @@
 <!-- Header contains nav bar -->
-<header>
-    <nav class="navbar">
+<!-- <header class="shadow"> -->
+    <nav class="nav shadow">
         <ul class="nav_links">
             <img class="drawnlogo" href="/homepage" src="../../../assets/images/PlanIt_Logo (1).png">
             <!-- <li><a href="/homepage" class="logo">PlanIt</a></li> -->
-            <li>Welcome Back, Megan!</li>
-        </ul>
+            <li id="midtext">Where Will Your Next Adventure Take You</li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Welcome Back Megan!
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dashboard" href="/dashboard"><button>Dashboard</button></a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          </ul>
     </nav>
-    <form id='content' class='hide'>
-    </form>
-    <a class="dashboard" href="/dashboard"><button>Dashboard</button></a>
     <!-- <a id="logout" class='logout'><button>Logout</button></a> -->
     <hr>
-</header>
+<!-- </header> -->
