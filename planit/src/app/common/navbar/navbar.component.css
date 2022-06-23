@@ -21,10 +21,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
   }
   
   header .logo {
@@ -35,13 +33,30 @@ header {
     font-size: 1.3em;
   }
 
-  .drawnlogo {
-    max-height:100px;
+  .nav {
+    top: 0;
+    left: 0;
+    right: 0px;
+    min-width: 100%;
+    z-index: 1000;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    flex-wrap: wrap;
   }
-  
+
+  .shadow {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    width: 100%;
+  }
+
   .nav_links {
     list-style: none;
     margin-bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   
   .nav_links li {
@@ -55,6 +70,26 @@ header {
   
   .nav_links li a:hover {
     color: rgba(96, 108, 56, 1);
+  }
+
+  .drawnlogo {
+    max-height:120px;
+    justify-content: flex-start;
+    margin-left: 0px;
+  }
+
+  #midtext {
+    font-weight: bolder;
+    font-size: 30px;
+    align-items: center;
+  }
+
+  .dropdown {
+    display: flex; 
+    justify-content: right; 
+    text-align: end;
+    align-items: end;
+    margin-right: 0px;
   }
 
   button {
