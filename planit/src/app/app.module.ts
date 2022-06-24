@@ -16,6 +16,12 @@ import { SignupComponent } from './common/signup/signup.component';
 import { HomepageComponent } from './common/homepage/homepage.component';
 import { DatePickerComponent } from './common/date-picker/date-picker.component';
 import { MaterialExampleModule } from './material.module';
+import { TripCreateComponent } from './trip/trip-create/trip-create.component';
+import { TripDetailComponent } from './trip/trip-detail/trip-detail.component';
+import { TripListComponent } from './trip/trip-list/trip-list.component';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from 'src/environments/environment';
+import { AuthComponent } from './user/auth/auth.component';
 
 // 
 @NgModule({
@@ -26,9 +32,17 @@ import { MaterialExampleModule } from './material.module';
     LoginComponent,
     SignupComponent,
     HomepageComponent,
-    DatePickerComponent
+    DatePickerComponent,
+    TripCreateComponent,
+    TripDetailComponent,
+    TripListComponent,
+    AuthComponent
   ],
   imports: [
+    AuthModule.forRoot({
+      domain: environment.authDomain,
+      clientId: environment.authClientId
+    }),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
