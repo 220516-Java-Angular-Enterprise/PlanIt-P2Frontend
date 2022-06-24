@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-landingpage',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingpageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
+
+  isLoggedIn: boolean = false;
 
   ngOnInit(): void {
+    this.auth.isAuthenticated$.subscribe(b => {
+      this.isLoggedIn = b;
+    })
+  }
+
+  logIn(): void {
+    this.auth.loginWithRedirect({
+        appState: { target: '/homepage' }
+      });
+  }
+
+  logOut(): void {
+    this.auth.logout();
   }
 
 }

@@ -102,6 +102,7 @@
     letter-spacing: 2px;
     transition: 0.2s;
     border-radius: 12px;
+    cursor: pointer;
   }
   .text a:hover {
     transform: translateY(-5px);

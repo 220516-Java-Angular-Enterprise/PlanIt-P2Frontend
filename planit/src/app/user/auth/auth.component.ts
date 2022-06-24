@@ -19,11 +19,12 @@ export class AuthComponent implements OnInit {
   }
 
   logIn(): void {
-    this.auth.loginWithRedirect();
+    this.auth.loginWithRedirect({
+        appState: { target: '/homepage' }
+      });
   }
 
   logOut(): void {
     this.auth.logout();
   }
-
 }
