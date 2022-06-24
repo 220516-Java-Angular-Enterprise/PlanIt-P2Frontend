@@ -15,8 +15,8 @@
             regret not taking that trip ever again! 
         </p>
     <!-- login/signup routes -->
-    <a href="/login">Log In</a>
-    <a href="/signup">Sign Up</a>
+    <a *ngIf="!isLoggedIn" (click)="logIn()">Log In</a>
+    <a *ngIf="!isLoggedIn" (click)="logIn()">Sign Up</a>
 </div>
 
 <ul class="social">
