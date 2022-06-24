@@ -87,8 +87,8 @@ header {
   .dropdown {
     display: flex; 
     justify-content: right; 
-    text-align: end;
-    align-items: end;
+    text-align: flex-end;
+    align-items: flex-end;
     margin-right: 0px;
   }
 
