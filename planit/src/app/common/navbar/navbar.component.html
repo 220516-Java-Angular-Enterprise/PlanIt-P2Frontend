@@ -3,19 +3,17 @@
     <nav class="nav shadow">
         <ul class="nav_links">
             <img class="drawnlogo" href="/homepage" src="../../../assets/images/PlanIt_Logo (1).png">
-            <!-- <li><a href="/homepage" class="logo">PlanIt</a></li> -->
             <li id="midtext">Where Will Your Next Adventure Take You</li>
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Welcome Back Megan!
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="user">
+              Welcome Back {{user.nickname}}!
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dashboard" href="/dashboard"><button>Dashboard</button></a></li>
+            <ul class="dropdown-menu row" aria-labelledby="navbarDropdown">
+              <li><a class="dashboard" href="/dashboard">Dashboard</a></li>
               <auth></auth>
             </ul>
           </li>
           </ul>
     </nav>
-    <!-- <a id="logout" class='logout'><button>Logout</button></a> -->
     <hr>
 <!-- </header> -->
