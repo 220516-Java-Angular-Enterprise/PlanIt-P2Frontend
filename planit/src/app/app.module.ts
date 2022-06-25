@@ -22,6 +22,7 @@ import { TripListComponent } from './trip/trip-list/trip-list.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment';
 import { AuthComponent } from './user/auth/auth.component';
+import { HptripsearchComponent } from './common/hptripsearch/hptripsearch.component';
 
 // 
 @NgModule({
@@ -36,7 +37,8 @@ import { AuthComponent } from './user/auth/auth.component';
     TripCreateComponent,
     TripDetailComponent,
     TripListComponent,
-    AuthComponent
+    AuthComponent,
+    HptripsearchComponent
   ],
   imports: [
     AuthModule.forRoot({
