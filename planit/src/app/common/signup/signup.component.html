@@ -1,1 +1,47 @@
-<auth></auth>
+<auth>
+    <section class="showcase">
+        <div class="container">
+        <img src="PlanIt_Logo (1).png" class="logo">
+        <video autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true" >
+            <source src="../../../assets/videos/beach.mp4" type="video/mp4">
+        </video>
+        
+        
+        <article>
+            <h2>Sign Up</h2>
+            <form style="text-align: center">
+                <fieldset id="signupform" >
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" required="required" placeholder="First Name"/>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" required="required" placeholder="Last Name"/>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required="required" placeholder="Username"/>
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="password" required="required" placeholder="Password"/>
+                    <label for="rpassword">Retype Password</label>
+                    <input type="text" id="rpassword" name="rpassword" required="required" placeholder="Retype Password"/>
+                    <label for="emailinput">Email</label>
+                    <input type="email" id="emailinput" name="email" required="required" placeholder="Email"/>
+                </fieldset>
+                
+                <fieldset id="signup">
+                    <input type="button" id="signupBtn" value="Sign Up" />
+                </fieldset>
+                 
+                <fieldset>
+                    <p>Have an account? <a href="login.component.html">Log In</a>
+                </fieldset>
+            </form>
+        </article>
+        
+        <article>
+            <ul class="social">
+            <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+            <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+            </ul>
+        </article>
+        </div>
+        </section>
+</auth>
