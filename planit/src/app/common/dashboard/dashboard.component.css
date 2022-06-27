@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+      font-family: 'Abril Fatface', cursive;
+}
+
+.welcome {
+  background-color: #606C38;
+  padding: 30px;
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  height: 100px;
+}
+.trip {
+  background-color: #606C38;
+  padding: 30px;
+  text-align: right;
+  font-size: 20px;
+  color: white;
+  height: 100px;
+}
+  
+}
+  .logo {
+  display: block;
+float: left;
+  width: 50%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+  height: 958px;
+  background: #E9EDC9;
+  padding: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px 70px;
+  grid-template-columns: auto auto auto auto;
+  background-color: #FEFAE0;
+  padding: 20px;
+  width: 80.0014%;
+  height: 958px;
+  float: left;
+}
+
+.grid-item {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  width: 70%;
+  height: 100px;
+  font-size: 20px;
+  text-align: center;
+  float: center;
+}
+
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #606C38;
+  padding: 2px;
+  text-align: center;
+  color: white;
+  height: 150px;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+  .social li {
+    list-style: none;
+  }
+  .social li a {
+    display: inline-block;
+    margin-right: 20px;
+    filter: invert(1);
+    transform: scale(0.5);
+    transition: 0.5s;
+  }
+  .social li a:hover {
+    transform: scale(0.5) translateY(-15px);
+  }
