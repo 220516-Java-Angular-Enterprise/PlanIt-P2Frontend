@@ -1,1 +1,42 @@
-<auth></auth>
+<auth>
+  <section class="showcase">
+    <img src="PlanIt_Logo (1).png" class="logo">
+    
+    
+    <header>
+      <h2 class="logo">PlanIt</h2>
+    </header>
+    <video autoplay muted loop oncanplay="this.play()" onloadedmetadata="this.muted = true" >
+        <source src="../../../assets/videos/beach.mp4" type="video/mp4">
+    </video>
+    
+    <article>
+        <h2>Login</h2>
+      <div class="form">
+        <form style="text-align: center">
+          <fieldset id="loginform">
+            <label for="usernmae">Username</label>
+            <input type="text" id="username" name="username" required="required" placeholder="Username"/>
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" required="required" placeholder="Password" />
+          </fieldset>
+          
+          <fieldset id="login">
+            <input type="button" id="loginBtn" value="Log In" />
+          </fieldset>
+          <fieldset>
+            <p>Don't have an account? <a href="signup.component.html">Sign Up</a>
+          </fieldset>
+        </form>
+    </article>
+    
+    <article>
+      <ul class="social">
+        <li><a href="#"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+        <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+        <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+      </ul>
+    </article>
+    
+    </section>
+</auth>
