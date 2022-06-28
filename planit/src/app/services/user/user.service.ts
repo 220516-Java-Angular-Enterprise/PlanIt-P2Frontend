@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  private userURL = "http://planitproject2-env-1.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit/";
+  private userURL = " http://planitproject2-env.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit";
 
   getAllUsers(): Promise<User[]> {
     return firstValueFrom(this.http.get<User[]>(this.userURL));
