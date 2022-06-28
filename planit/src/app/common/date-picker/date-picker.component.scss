@@ -5,7 +5,7 @@ mat-hint {
   align-items: center;
   display: flex;
   font-size: 90%;
-  width: 250px;
+  // width: 250px;
   margin-left: 35px;
 }
 
@@ -33,6 +33,7 @@ mat-date-range-input {
   background-color: white;
 }
 
+
 #inputDestination {
   width: 250px;
   border: 3px solid #ccc;
@@ -47,7 +48,13 @@ mat-date-range-input {
 .travelform {
   display: flex;
   justify-content: center;
+  flex: 1 1 250px;
 }
+
+// .travelform>* {
+  
+//   justify-content: center;
+// }
 
 li, a, button {
   font-weight: 500;

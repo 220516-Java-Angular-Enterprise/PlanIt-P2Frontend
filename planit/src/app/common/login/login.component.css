@@ -166,11 +166,8 @@ fieldset fieldset {
     .text h3 {
       font-size: 2em;
     }
-  }*/
-  /* Style the video: 100% width and height to cover the entire window */
- {
-  box-sizing: border-box;
-}
+  }
+
 
 body {
   margin: 0;
