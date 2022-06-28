@@ -21,16 +21,7 @@
     "lib": [
       "es2020",
       "dom"
-    ],
-    "noUnusedParameters": false,
-    "noUnusedLocals": false,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "strictBindCallApply": true,
-    "esModuleInterop": true,
-    "allowJs": true
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

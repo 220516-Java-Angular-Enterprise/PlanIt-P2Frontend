@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  // X_RapidAPI_Key: '20996e2b6amshc0124e31bc6de18p1e05e5jsnd571f19596ce',
   authDomain: 'dev-93osv7qy.us.auth0.com',
   authClientId: 'obLXc1rACXdbXXobWdLjDUwnWwlpJcxW'
 };
