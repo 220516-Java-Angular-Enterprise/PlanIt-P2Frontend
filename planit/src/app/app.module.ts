@@ -23,6 +23,7 @@ import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment';
 import { AuthComponent } from './user/auth/auth.component';
 import { HptripsearchComponent } from './common/hptripsearch/hptripsearch.component';
+import { HotelComponent } from './trip/hotel/hotel.component';
 
 // 
 @NgModule({
@@ -38,7 +39,8 @@ import { HptripsearchComponent } from './common/hptripsearch/hptripsearch.compon
     TripDetailComponent,
     TripListComponent,
     AuthComponent,
-    HptripsearchComponent
+    HptripsearchComponent,
+    HotelComponent
   ],
   imports: [
     AuthModule.forRoot({
