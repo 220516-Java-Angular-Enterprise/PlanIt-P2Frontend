@@ -4,6 +4,7 @@ import { HomepageComponent } from './common/homepage/homepage.component';
 import { LandingpageComponent } from './common/landingpage/landingpage.component';
 import { LoginComponent } from './common/login/login.component';
 import { SignupComponent } from './common/signup/signup.component';
+import { HotelComponent } from './trip/hotel/hotel.component';
 import { TripCreateComponent } from './trip/trip-create/trip-create.component';
 import { TripDetailComponent } from './trip/trip-detail/trip-detail.component';
 import { TripListComponent } from './trip/trip-list/trip-list.component';
@@ -38,8 +39,11 @@ const routes: Routes = [
   {
     path: 'create/trip',
     component: TripCreateComponent
+  },
+  {
+    path: 'trip/hotel',
+    component: HotelComponent
   }
-
 ];
 
 
