@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { Plans } from '../../models/plans';
 
@@ -11,7 +11,9 @@ export class DayPlanService {
 
   constructor(private http: HttpClient) { }
 
-  private planURL = "http://planitproject2-env-1.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit/";
+  // backendHeader = new HttpHeaders().set('Access-Control-Allow-Origin', '*')
+
+  private planURL = "http://planitproject2-env.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit";
 
   getAllTrips(): Promise<Plans[]> {
     return firstValueFrom(this.http.get<Plans[]>(this.planURL));
