@@ -2,6 +2,7 @@ import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { Trip } from 'src/app/models/trip';
+import { ActivityService } from 'src/app/services/activity/activity.service';
 import { TripService } from 'src/app/services/trip/trip.service';
 
 
@@ -12,10 +13,11 @@ import { TripService } from 'src/app/services/trip/trip.service';
 })
 export class HptripsearchComponent implements OnInit {
 
-  constructor(private tripService: TripService, private router: Router, private auth: AuthService) { }
+  constructor(private tripService: TripService, private activityService: ActivityService, private router: Router, private auth: AuthService) { }
 
   trips: Trip[] = [];
-  user: any = {}
+  user: any = {};
+  activities: any = {};
 
   ngOnInit(): void {
     this.tripService.getAllTrips().then(t => {
@@ -25,6 +27,9 @@ export class HptripsearchComponent implements OnInit {
     this.auth.user$.subscribe(u => {
       console.log(u);
     });
+
+    this.activityService.getActivitiesByCategory();
+    
   }
 
   goToTripId(id: string) {
