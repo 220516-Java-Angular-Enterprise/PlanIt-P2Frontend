@@ -48,6 +48,17 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <p>Saved trips</p>
+                <div *ngFor="let trip of trips" (click)="goToTripId(trip.id)">
+                  <div class="card">
+                    <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{user.nickname}}</h5>
+                      <p class="card-text" data-spy="scroll" data-target="#card-text" data-offset="0">{{user.nickname}}
+                      </p>
+                    </div>
+                  </div>
+          
+                </div>
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <p>Trip By day</p>
