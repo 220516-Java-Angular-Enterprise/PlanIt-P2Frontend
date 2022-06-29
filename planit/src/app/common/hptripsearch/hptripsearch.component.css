@@ -9,6 +9,16 @@
     height: 30rem;
   }
 
+.dashboardContainer {
+    width: 100%;
+    display: flex;
+    
+}
+
+.ng-star-inserted {
+    width: 20rem;
+}
+
 .card-deck {
     justify-content: space-around;
     align-items: center;

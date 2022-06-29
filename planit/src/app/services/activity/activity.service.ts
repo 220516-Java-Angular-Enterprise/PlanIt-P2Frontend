@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Plans } from '../../models/plans';
 import {Trip} from '../../models/trip'
 import { HttpParams } from '@angular/common/http';
+import { Activity } from 'src/app/models/activity';
 
 
 @Injectable({
@@ -15,47 +16,37 @@ export class ActivityService {
   constructor(private http: HttpClient) { }
 
   options = {
-    method: 'POST',
+    // method: 'GET',
     headers: {
-        'content-type': 'application/json',
-        'X-RapidAPI-Key': '20996e2b6amshc0124e31bc6de18p1e05e5jsnd571f19596ce',
-        'X-RapidAPI-Host': 'travel-places.p.rapidapi.com'
-    },
-    body: '{"query":"{ getPlaces(categories:[\"NATURE\"],lat:37,lng:-122,maxDistMeters:50000) { name,lat,lng,abstract,distance,categories } }"}'
-};
+      'X-RapidAPI-Key': '20996e2b6amshc0124e31bc6de18p1e05e5jsnd571f19596ce',
+      'X-RapidAPI-Host': 'trueway-places.p.rapidapi.com'
+    }
+  };
+  
+  activitydata() {
+  fetch('https://trueway-places.p.rapidapi.com/FindPlacesNearby?location={{this.lat}}%2C{{this.lng}}&type={{this.type}}&radius=150&language=en', this.options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+}
 
-  header = new HttpHeaders().set("X-RapidAPI-Key", "20996e2b6amshc0124e31bc6de18p1e05e5jsnd571f19596ce");
+    // activitydata(){
+    //     let headers=new HttpHeaders({
+    //       'X-RapidAPI-Key': '20996e2b6amshc0124e31bc6de18p1e05e5jsnd571f19596ce',
+    //       'X-RapidAPI-Host': 'trueway-places.p.rapidapi.com'
+    //     });
+    //     this.http
+    //     .get<any>('https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=37.783366%2C-122.402325&type=cafe&radius=150&language=en',{
+    //       headers:headers
+    //     })
+    //     .subscribe(data => {
+    //       console.log(data);
+    //     });
+    //   }
 
-  rootURL: string = "travel-places.p.rapidapi.com/";
+    getActivityByLocation(): Observable<Activity[]>{
+        // console.log(this.http.get<Activity[]>('https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=37.783366%2C-122.402325&type=cafe&radius=150&language=en', this.options));
+        return this.http.get<Activity[]>('https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=37.783366%2C-122.402325&type=cafe&radius=150&language=en', this.options)
+    }
 
-//   Get activities from external api will somehow need to convert city name to lat/long
-
-  getActivitiesByPlace(): Observable<any>{
-    return this.http.get('travel-places.p.rapidapi.com/', {'headers': this.header})
-  }
-
-// Get activities by Category  
-  getActivitiesByCategory(): Observable<any>{
-    console.log(this.http.get('travel-places.p.rapidapi.com/', this.options))
-    return this.http.get('travel-places.p.rapidapi.com/', this.options)
-  }
-
-  activityData(){
-    const options = {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json',
-            'X-RapidAPI-Key': '20996e2b6amshc0124e31bc6de18p1e05e5jsnd571f19596ce',
-            'X-RapidAPI-Host': 'travel-places.p.rapidapi.com'
-        },
-        body: '{"query":"{ getPlaces(categories:[\"NATURE\"],lat:37,lng:-122,maxDistMeters:50000) { name,lat,lng,abstract,distance,categories } }"}'
-    };
-    
-    fetch('https://travel-places.p.rapidapi.com/', options)
-        // .then(response => response.json())
-        .then(response => response.text())
-        .then(text => console.log(text))
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-  }
 }

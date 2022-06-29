@@ -6,6 +6,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 import {AppModule} from '../../../app/app.module';
 import {environment} from '../../../environments/environment';
+import {Activity} from '../../models/activity'
 
 if (environment.production) {
   enableProdMode();
@@ -25,9 +26,18 @@ export class DatePickerComponent implements OnInit {
 
   constructor() { }
 
+  // activity: Activity[] = [];
+
+
   ngOnInit(): void {
   }
 
+
+
 }
 
+// searchInput() {
+//   this.activity = [];
+
+// }
 
