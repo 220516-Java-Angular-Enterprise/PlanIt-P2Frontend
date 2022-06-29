@@ -42,7 +42,7 @@ import { DashboardComponent } from './common/dashboard/dashboard.component';
     AuthComponent,
     HptripsearchComponent,
     HotelComponent,
-    DashboardComponent;
+    DashboardComponent,
   ],
   imports: [
     AuthModule.forRoot({
