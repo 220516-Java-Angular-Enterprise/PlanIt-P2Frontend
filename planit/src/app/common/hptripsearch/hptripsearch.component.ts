@@ -1,9 +1,12 @@
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '@auth0/auth0-angular';
 import { Trip } from 'src/app/models/trip';
 import { ActivityService } from 'src/app/services/activity/activity.service';
 import { TripService } from 'src/app/services/trip/trip.service';
+import { Activity } from 'src/app/models/activity';
+// import { HotelComponent } from 'src/app/trip/hotel/hotel.component';
 
 
 @Component({
@@ -18,38 +21,31 @@ export class HptripsearchComponent implements OnInit {
   trips: Trip[] = [];
   user: any = {};
   activities: any = {};
+  activity: Activity[] = [];
+  hotel: any = {};
 
-  ngOnInit(): void {
+  async ngOnInit() {
+
+    await this.activityService.getActivityByLocation().toPromise().then((data:any) =>{
+          this.activities = data.results;
+          console.log(data);
+          console.log("This is:" + this.activities[0].name);
+    })
+
+    console.log(this.activities);
+
     this.tripService.getAllTrips().then(t => {
       this.trips = t;
     });
 
-    this.auth.user$.subscribe(u => {
-      console.log(u);
-    });
+    // this.auth.user$.subscribe(u => {
+    //   console.log(u);
+    // });
 
-    this.activityService.getActivitiesByCategory();
-    
   }
 
   goToTripId(id: string) {
     this.router.navigateByUrl(`trips/${id}`)
   }
 
-  activityData(){
-    const options = {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json',
-            'X-RapidAPI-Key': '20996e2b6amshc0124e31bc6de18p1e05e5jsnd571f19596ce',
-            'X-RapidAPI-Host': 'travel-places.p.rapidapi.com'
-        },
-        body: '{"query":"{ getPlaces(categories:[\"NATURE\"],lat:37,lng:-122,maxDistMeters:50000) { name,lat,lng,abstract,distance,categories } }"}'
-    };
-    
-    fetch('https://travel-places.p.rapidapi.com/', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-  }
 }
