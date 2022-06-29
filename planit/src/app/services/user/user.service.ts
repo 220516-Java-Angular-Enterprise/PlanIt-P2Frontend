@@ -25,6 +25,8 @@ export class UserService {
     return firstValueFrom(this.http.get<User>(this.userURL + "/" + id));
   }
 
+  
+
   // need to see how auth talks to db
   createNewUser(user: User) {
     return firstValueFrom(this.http.post(this.userURL, user));
