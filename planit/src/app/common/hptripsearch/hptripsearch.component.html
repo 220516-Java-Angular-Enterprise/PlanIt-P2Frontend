@@ -46,11 +46,11 @@
               <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Day Plans</button>
             </li>
         </ul>
-        <div class="tab-content dashboardContainer" id="myTabContent">
+        <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active col" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <p>Saved trips</p>
-                <div *ngFor="let trip of trips" (click)="goToTripId(trip.id)">
                   <div class="card">
+                    <div *ngFor="let trip of trips" (click)="goToTripId(trip.id)">
                     <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title card-header">{{trip.id}}</h5>
@@ -62,8 +62,8 @@
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <p>Trip By day</p>
-                <div *ngIf="activities" >
                   <div class="card col">
+                    <div *ngIf="activities" >
                     <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title card-header">{{activities[0].name}}</h5>
