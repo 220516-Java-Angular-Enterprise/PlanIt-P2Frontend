@@ -24,7 +24,6 @@ import { environment } from 'src/environments/environment';
 import { AuthComponent } from './user/auth/auth.component';
 import { HptripsearchComponent } from './common/hptripsearch/hptripsearch.component';
 import { HotelComponent } from './trip/hotel/hotel.component';
-import { DashboardComponent } from './common/dashboard/dashboard.component';
 
 // 
 @NgModule({
@@ -41,8 +40,7 @@ import { DashboardComponent } from './common/dashboard/dashboard.component';
     TripListComponent,
     AuthComponent,
     HptripsearchComponent,
-    HotelComponent,
-    DashboardComponent,
+    HotelComponent
   ],
   imports: [
     AuthModule.forRoot({
