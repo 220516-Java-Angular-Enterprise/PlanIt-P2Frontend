@@ -18,7 +18,7 @@ import { DatePickerComponent } from '../date-picker/date-picker.component';
 })
 export class HptripsearchComponent implements OnInit {
 
-  constructor(private tripService: TripService, private activityService: ActivityService,private hotelService:HotelService, private router: Router, private auth: AuthService, private search: DatePickerComponent) { }
+  constructor(private tripService: TripService, private activityService: ActivityService,private hotelService:HotelService, private router: Router, private auth: AuthService) { }
 
   trips: Trip[] = [];
   user: any = {};
