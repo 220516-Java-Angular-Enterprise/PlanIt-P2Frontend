@@ -18,7 +18,7 @@ export class TripService {
 
 
   getAllTrips(): Promise<Trip[]> {
-    console.log(firstValueFrom(this.http.get<Trip[]>(this.tripURL)));
+    // console.log(firstValueFrom(this.http.get<Trip[]>(this.tripURL)));
     return firstValueFrom(this.http.get<Trip[]>(this.tripURL));
   }
 
