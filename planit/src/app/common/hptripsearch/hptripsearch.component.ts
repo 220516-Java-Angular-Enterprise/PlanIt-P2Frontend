@@ -21,31 +21,41 @@ export class HptripsearchComponent implements OnInit {
   constructor(private tripService: TripService, private activityService: ActivityService,private hotelService:HotelService, private router: Router, private auth: AuthService) { }
 
   trips: Trip[] = [];
-  user: any = {};
   activities: any = {};
-  activity: Activity[] = [];
   hotel: any = {};
-  lat: string = "";
-  long: string = "";
+  parisHotel: any = {};
+  parisCafe: any = {};
+  parisZoo: any = {};
+  parisMuseum: any = {};
+  parisAttract: any = {}
 
   async ngOnInit() {
-
-
-       //trying to put the hotel in the cards
-       await this.hotelService.getHotelParis().toPromise().then((data:any) =>{
-        this.hotel= data.suggestions;
-        console.log(data);
-  })
-
-    // this.long = this.hotel[1].entities[0].longitude;
-    // this.lat =this.hotel[1].entities[0].latitude;
-
-    await this.activityService.getCafeByParis().toPromise().then((data:any) =>{
-          this.activities = data.results;
-          console.log(data);
+    //trying to put the hotel in the cards
+    await this.hotelService.getHotelParis().toPromise().then((data:any) =>{
+      this.parisHotel= data.suggestions;
+      console.log(data);
     })
 
-    console.log(this.activities);
+    // Paris URLs
+    await this.activityService.getCafeByParis().toPromise().then((data:any) =>{
+      this.parisCafe = data.results;
+      console.log(data);
+    })
+
+    await this.activityService.getZooByParis().toPromise().then((data:any) =>{
+      this.parisZoo = data.results;
+      console.log(data);
+    })
+
+    await this.activityService.getMuseumByParis().toPromise().then((data:any) =>{
+      this.parisMuseum = data.results;
+      console.log(data);
+    })
+
+    await this.activityService.getAttractByParis().toPromise().then((data:any) =>{
+      this.parisAttract = data.results;
+      console.log(data);
+    })
 
     await this.tripService.getAllTrips().then(t => {
       this.trips = t;
@@ -54,6 +64,13 @@ export class HptripsearchComponent implements OnInit {
 
   goToTripId(id: string) {
     this.router.navigateByUrl(`trips/${id}`)
+  }
+
+  parisCafeCall() {
+    this.activityService.getCafeByParis().toPromise().then((data:any) =>{
+      this.parisCafe = data.results;
+      console.log(data);
+    })
   }
 
 }
