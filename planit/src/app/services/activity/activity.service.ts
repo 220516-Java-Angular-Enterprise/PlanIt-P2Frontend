@@ -21,8 +21,12 @@ export class ActivityService {
   parisCafeUrl = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=48.86272%2C2.34375&type=cafe&radius=150&language=en';
   newYorkCafeUrl = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=40.75668%2C-73.98647&type=cafe&radius=150&language=en';
   londonCafeUrl = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=51.507538%2C-0.127804&type=cafe&radius=150&language=en';
+
+  //BarcelonaURLS
   barcelonaCafeUrl = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=41.37785%2C2.17055&type=cafe&radius=150&language=en';
- 
+  barcelonaZooUrl = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=41.37785%2C2.17055&type=zoo&radius=150&language=en';
+  barcelonaMuseumUrl = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=41.37785%2C2.17055&type=musuem&radius=150&language=en';
+  barcelonaTouristUrl = 'https://trueway-places.p.rapidapi.com/FindPlacesNearby?location=41.37785%2C2.17055&type=tourist_attraction&radius=150&language=en';
 
   options = {
     // method: 'GET',
@@ -62,5 +66,17 @@ export class ActivityService {
   getCafeByParis(): Observable<Activity[]>{
     return this.http.get<Activity[]>(this.parisCafeUrl, this.options)
 }
-
+// Barcelona Specific Activity
+  getCafeByBarcelona():Observable<Activity[]>{
+    return this.http.get<Activity[]>(this.barcelonaCafeUrl,this.options)
+  }
+  getZooByBarcelona():Observable<Activity[]>{
+    return this.http.get<Activity[]>(this.barcelonaZooUrl,this.options)
+  }
+  getMuseumByBarcelona():Observable<Activity[]>{
+    return this.http.get<Activity[]>(this.barcelonaMuseumUrl,this.options)
+  }
+  getTouristByBarcelona():Observable<Activity[]>{
+    return this.http.get<Activity[]>(this.barcelonaTouristUrl,this.options)
+  }
 }

@@ -36,11 +36,39 @@ export class HptripsearchComponent implements OnInit {
         this.hotel= data.suggestions;
         console.log(data);
   })
+  //Barcelona
+  await this.hotelService.getHotelBarcelona().toPromise().then((data:any) =>{
+    this.hotel= data.suggestions;
+    console.log(data);
+})
 
     // this.long = this.hotel[1].entities[0].longitude;
     // this.lat =this.hotel[1].entities[0].latitude;
 
     await this.activityService.getCafeByParis().toPromise().then((data:any) =>{
+          this.activities = data.results;
+          console.log(data);})
+                            
+          
+          
+          
+                    //Barcelona
+    await this.activityService.getCafeByBarcelona().toPromise().then((data:any) =>{
+          this.activities = data.results;
+          console.log(data);})
+
+          //Zoo
+   await this.activityService.getZooByBarcelona().toPromise().then((data:any) =>{
+         this.activities = data.results;
+        console.log(data);})
+
+        //Museum
+     await this.activityService.getMuseumByBarcelona().toPromise().then((data:any) =>{
+         this.activities = data.results;
+         console.log(data);})
+
+         //Tourist Attraction
+      await this.activityService.getTouristByBarcelona().toPromise().then((data:any) =>{
           this.activities = data.results;
           console.log(data);
     })
