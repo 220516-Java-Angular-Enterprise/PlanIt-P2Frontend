@@ -17,7 +17,7 @@ export class TripDetailComponent implements OnInit {
   trip: Trip = {
     id: '',
     hotel: '',
-    destination: '',
+    destination:'',
     status: '',
     plans: []
   }

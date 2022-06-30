@@ -29,8 +29,13 @@ export class TripService {
   createNewTrip(trip: Trip) {
     return firstValueFrom(this.http.post(this.tripURL, trip));
   }
-  getTripByUser(user: string): Promise<Trip> {
-    return firstValueFrom(this.http.get<Trip>(this.tripURL + "/" + user));
-  }
+  // getTripByUser(user: string): Promise<Trip> {
+  //   return firstValueFrom(this.http.get<Trip>(this.tripURL + "/" + user));
+getTripByUser():Promise<Trip>{
+  return firstValueFrom(this.http.get<Trip>("http://planittestp2-env.eba-e3a9gv9f.us-east-2.elasticbeanstalk.com/planit/trips/64c9289b-91f7-48b5-a87e-88c6a91e4765%22"))
 }
+
+  }
+ 
+
 

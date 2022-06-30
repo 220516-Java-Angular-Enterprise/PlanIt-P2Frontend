@@ -49,7 +49,9 @@ export class HptripsearchComponent implements OnInit {
     this.tripService.getAllTrips().then(t => {
       this.trips = t;
     });
+    console.log(this.tripService.getTripByUser());
   }
+ 
 
   goToTripId(id: string) {
     this.router.navigateByUrl(`trips/${id}`)
