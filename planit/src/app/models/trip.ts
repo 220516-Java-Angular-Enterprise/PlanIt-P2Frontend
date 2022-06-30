@@ -5,8 +5,8 @@ export interface Trip {
     // We may have to make hotel import an array.
     hotel: string;
     hotel_id: string;
-    longitude: number;
-    latitude:number;
+    longitude: string;
+    latitude: string;
     status: string;
     dayPlan_id: string;
     plans: Plans[];
