@@ -24,17 +24,34 @@
             <p class="card-text"  style="overflow-y: scroll;">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
           </div>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title card-header">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-            </div>
-          </div>
-      </div> 
+      </div>
     </div>
-</section>
-   
+  </section>
+       
+
+
+    <!--Hotel Card-->
+    <p> Hotels</p>
+    <div *ngFor="let trip of trips"(click)="goToTripId">
+    <div class="card">
+        <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title card-header">{{trip.id}}</h5>
+          <p class="card-text"  data-spy="scroll" data-target="#card-text" data-offset="0">{{trip.hotel}}</p>
+        </div>
+      </div>
+  </div> 
+ <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+  <p>Hotels</p>
+    <div class="card col">
+      <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title card-header">{{hotel[0].entities}}</h5>
+        <p class="card-text" data-spy="scroll" data-target="#card-text" data-offset="0">
+        </p>
+      </div>
+    </div>
+  </div>
 <!-- dashboard section -->
 <div class="album py-5 bg-light dashboard">
     <div class="container-fluid">
@@ -76,7 +93,7 @@
           </div>
     </div>
 </div>
-</main>
+
 
 
  

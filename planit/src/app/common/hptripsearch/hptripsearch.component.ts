@@ -27,11 +27,11 @@ export class HptripsearchComponent implements OnInit {
 
   async ngOnInit() {
 
-    await this.activityService.getActivityByLocation().toPromise().then((data:any) =>{
+    await this.activityService.getActivityByLocal().toPromise().then((data:any) =>{
           this.activities = data.results;
           console.log(data);
-          console.log("This is:" + this.activities[0].name);
     })
+
 
     console.log(this.activities);
 
@@ -49,6 +49,11 @@ export class HptripsearchComponent implements OnInit {
 
 //console.log(this.hotel);
 
+
+
+    this.tripService.getAllTrips().then(t => {
+      this.trips = t;
+    });
 
 
     // this.auth.user$.subscribe(u => {
