@@ -29,5 +29,8 @@ export class TripService {
   createNewTrip(trip: Trip) {
     return firstValueFrom(this.http.post(this.tripURL, trip));
   }
+  getTripByUser(user: string): Promise<Trip> {
+    return firstValueFrom(this.http.get<Trip>(this.tripURL + "/" + user));
+  }
 }
 
