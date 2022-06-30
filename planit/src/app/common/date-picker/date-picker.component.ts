@@ -26,18 +26,22 @@ export class DatePickerComponent implements OnInit {
 
   constructor() { }
 
-  // activity: Activity[] = [];
+  activity: Activity[] = [];
+  input: string = "";
 
 
   ngOnInit(): void {
   }
 
-
-
+  searchInput() {
+ 
 }
 
-// searchInput() {
-//   this.activity = [];
+searchBar(event:any) {
+  this.input = event.target.value.toLowerCase();
+  console.log(this.input);
+}
+}
 
-// }
+
 
