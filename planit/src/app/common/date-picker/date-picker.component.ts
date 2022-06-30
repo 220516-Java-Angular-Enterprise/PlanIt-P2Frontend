@@ -2,11 +2,17 @@ import { Component, Input, OnInit } from '@angular/core';
 import {VERSION as CDK_VERSION} from '@angular/cdk';
 import {VERSION as MAT_VERSION} from '@angular/material/core';
 import {enableProdMode} from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 import {AppModule} from '../../../app/app.module';
 import {environment} from '../../../environments/environment';
 import {Activity} from '../../models/activity'
+import { HotelService } from 'src/app/services/trip/hotel.service';
+import { Hotel } from 'src/app/models/hotel';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 if (environment.production) {
   enableProdMode();
@@ -26,21 +32,10 @@ export class DatePickerComponent implements OnInit {
 
   constructor() { }
 
-  activity: Activity[] = [];
-  input: string = "";
-
-
   ngOnInit(): void {
+
   }
 
-  searchInput() {
- 
-}
-
-searchBar(event:any) {
-  this.input = event.target.value.toLowerCase();
-  console.log(this.input);
-}
 }
 
 

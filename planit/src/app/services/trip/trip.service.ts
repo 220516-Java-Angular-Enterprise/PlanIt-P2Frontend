@@ -14,11 +14,11 @@ export class TripService {
 
 // may have to take off trip routing
 
-  private tripURL = "http://planittestp2-env.eba-e3a9gv9f.us-east-2.elasticbeanstalk.com/planit/trips";
+  private tripURL = "http://planitproject2-env.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit/trips";
 
 
   getAllTrips(): Promise<Trip[]> {
-    console.log(firstValueFrom(this.http.get<Trip[]>(this.tripURL)));
+    // console.log(firstValueFrom(this.http.get<Trip[]>(this.tripURL)));
     return firstValueFrom(this.http.get<Trip[]>(this.tripURL));
   }
 

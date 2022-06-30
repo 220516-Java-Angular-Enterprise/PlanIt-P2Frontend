@@ -1,9 +1,10 @@
 
 <form class="row travelform">
+  <!-- (ngSubmit)="processForm(newSearchForm)" #newSearchForm="ngForm" -->
 
   <div class="col-md-2">
-    <label for="inputDestination" class="form-label">Destination</label>
-    <input type="text" class="form-control" id="inputDestination" (keyup)='searchBar($event)' placeholder="Madrid, Spain">
+    <label for="term" class="form-label">Destination</label>
+    <input type="text" class="form-control" id="inputDestination"  placeholder="Madrid, Spain">
   </div>
 
 <div class="col-md-2">
@@ -68,7 +69,7 @@
 </div>
 
 <div class="col-md-2" style="margin-top: 20px;">
-<button type='submit' class='search' id='submit-btn'>Submit</button>
+<button type='submit' value="Create" class='search' id='submit-btn'>Submit</button>
 </div>
 </form>
 
