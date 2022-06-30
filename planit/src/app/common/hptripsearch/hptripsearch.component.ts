@@ -24,47 +24,31 @@ export class HptripsearchComponent implements OnInit {
   activities: any = {};
   activity: Activity[] = [];
   hotel: any = {};
+  lat: string = "";
+  long: string = "";
 
   async ngOnInit() {
+
+
+       //trying to put the hotel in the cards
+       await this.hotelService.getHotel().toPromise().then((data:any) =>{
+        this.hotel= data.suggestions;
+        console.log(data);
+  })
+
+    this.long = this.hotel[1].entities[0].longitude;
+    this.lat =this.hotel[1].entities[0].latitude;
 
     await this.activityService.getActivityByLocal().toPromise().then((data:any) =>{
           this.activities = data.results;
           console.log(data);
     })
 
-
     console.log(this.activities);
-
-    // this.tripService.getAllTrips().then(t => {
-    //   this.trips = t;
-    // });
-
-    //trying to put the hotel in the cards
-    await this.hotelService.getHotel().toPromise().then((data:any) =>{
-      this.hotel= data.suggestions;
-      console.log(data);
-
-    
-     console.log("This is "+this.hotel[0].entities[0].geoId+(",")+
-    this.hotel[0].entities[1].destinationId+(",")+
-    this.hotel[0].entities[2].landmarkCityDestinationId+(",")+
-    this.hotel[0].entities[3].type+(",")+
-    this.hotel[0].entities[4].redirectPage)
-})
-//.destinationId.entities[0].landmarkCityDestinationId.entities[0].type
-//console.log(this.hotel);
-
-
 
     this.tripService.getAllTrips().then(t => {
       this.trips = t;
     });
-
-
-    // this.auth.user$.subscribe(u => {
-    //   console.log(u);
-    // });
-
   }
 
   goToTripId(id: string) {
