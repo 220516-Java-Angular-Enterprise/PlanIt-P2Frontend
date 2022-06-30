@@ -16,11 +16,14 @@ export class TripCreateComponent implements OnInit {
   displayFormSubmitError: boolean = false;
 
   trip: Trip = {
-    id: '',
-    hotel: '',
-    destination: '',
-    status: '',
-    plans: []
+      id: '',
+      hotel: '',
+      hotel_id: '',
+      longitude: '',
+      latitude: '',    
+      status: '',
+      dayPlan_id: '',
+      plans: []
   }
 
   placeholders = {
