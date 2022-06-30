@@ -3,7 +3,7 @@
 
   <div class="col-md-2">
     <label for="inputDestination" class="form-label">Destination</label>
-    <input type="text" class="form-control" id="inputDestination" placeholder="Madrid, Spain">
+    <input type="text" class="form-control" id="inputDestination" (keyup)='searchBar($event)' placeholder="Madrid, Spain">
   </div>
 
 <div class="col-md-2">
@@ -71,3 +71,5 @@
 <button type='submit' class='search' id='submit-btn'>Submit</button>
 </div>
 </form>
+
+<!-- (click)="searchInput()" -->

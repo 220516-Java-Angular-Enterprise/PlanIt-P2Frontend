@@ -17,8 +17,11 @@ export class TripDetailComponent implements OnInit {
   trip: Trip = {
     id: '',
     hotel: '',
-    destination:'',
+    hotel_id: '',
+    longitude: '',
+    latitude: '',    
     status: '',
+    dayPlan_id: '',
     plans: []
   }
 
