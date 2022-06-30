@@ -44,9 +44,14 @@ export class HptripsearchComponent implements OnInit {
       this.hotel= data.suggestions;
       console.log(data);
 
-     console.log("This is:" + this.hotel[0].entities);
+    
+     console.log("This is "+this.hotel[0].entities[0].geoId+(",")+
+    this.hotel[0].entities[1].destinationId+(",")+
+    this.hotel[0].entities[2].landmarkCityDestinationId+(",")+
+    this.hotel[0].entities[3].type+(",")+
+    this.hotel[0].entities[4].redirectPage)
 })
-
+//.destinationId.entities[0].landmarkCityDestinationId.entities[0].type
 //console.log(this.hotel);
 
 
