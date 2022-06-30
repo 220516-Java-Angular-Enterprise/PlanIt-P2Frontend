@@ -7,6 +7,7 @@ import { ActivityService } from 'src/app/services/activity/activity.service';
 import { TripService } from 'src/app/services/trip/trip.service';
 import { Activity } from 'src/app/models/activity';
 import { HotelService } from 'src/app/services/trip/hotel.service';
+import { DatePickerComponent } from '../date-picker/date-picker.component';
 // import { HotelComponent } from 'src/app/trip/hotel/hotel.component';
 
 
@@ -17,7 +18,7 @@ import { HotelService } from 'src/app/services/trip/hotel.service';
 })
 export class HptripsearchComponent implements OnInit {
 
-  constructor(private tripService: TripService, private activityService: ActivityService,private hotelService:HotelService, private router: Router, private auth: AuthService) { }
+  constructor(private tripService: TripService, private activityService: ActivityService,private hotelService:HotelService, private router: Router, private auth: AuthService, private search: DatePickerComponent) { }
 
   trips: Trip[] = [];
   user: any = {};
@@ -31,22 +32,22 @@ export class HptripsearchComponent implements OnInit {
 
 
        //trying to put the hotel in the cards
-       await this.hotelService.getHotel().toPromise().then((data:any) =>{
+       await this.hotelService.getHotelParis().toPromise().then((data:any) =>{
         this.hotel= data.suggestions;
         console.log(data);
   })
 
-    this.long = this.hotel[1].entities[0].longitude;
-    this.lat =this.hotel[1].entities[0].latitude;
+    // this.long = this.hotel[1].entities[0].longitude;
+    // this.lat =this.hotel[1].entities[0].latitude;
 
-    await this.activityService.getActivityByLocal().toPromise().then((data:any) =>{
+    await this.activityService.getCafeByParis().toPromise().then((data:any) =>{
           this.activities = data.results;
           console.log(data);
     })
 
     console.log(this.activities);
 
-    this.tripService.getAllTrips().then(t => {
+    await this.tripService.getAllTrips().then(t => {
       this.trips = t;
     });
   }

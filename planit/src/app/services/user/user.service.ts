@@ -11,7 +11,7 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
 
-  private userURL = " http://planitproject2-env.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit";
+  private userURL = " http://planitproject2-env.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit/users";
 
   // backendHeader = new HttpHeaders().set('Access-Control-Allow-Origin', '*')
 
