@@ -37,25 +37,25 @@ export class HptripsearchComponent implements OnInit {
     })
 
     // Paris URLs
-    await this.activityService.getCafeByParis().toPromise().then((data:any) =>{
-      this.parisCafe = data.results;
-      console.log(data);
-    })
+    // await this.activityService.getCafeByParis().toPromise().then((data:any) =>{
+    //   this.parisCafe = data.results;
+    //   console.log(data);
+    // })
 
-    await this.activityService.getZooByParis().toPromise().then((data:any) =>{
-      this.parisZoo = data.results;
-      console.log(data);
-    })
+    // await this.activityService.getZooByParis().toPromise().then((data:any) =>{
+    //   this.parisZoo = data.results;
+    //   console.log(data);
+    // })
 
-    await this.activityService.getMuseumByParis().toPromise().then((data:any) =>{
-      this.parisMuseum = data.results;
-      console.log(data);
-    })
+    // await this.activityService.getMuseumByParis().toPromise().then((data:any) =>{
+    //   this.parisMuseum = data.results;
+    //   console.log(data);
+    // })
 
-    await this.activityService.getAttractByParis().toPromise().then((data:any) =>{
-      this.parisAttract = data.results;
-      console.log(data);
-    })
+    // await this.activityService.getAttractByParis().toPromise().then((data:any) =>{
+    //   this.parisAttract = data.results;
+    //   console.log(data);
+    // })
 
     await this.tripService.getAllTrips().then(t => {
       this.trips = t;
@@ -67,8 +67,29 @@ export class HptripsearchComponent implements OnInit {
   }
 
   parisCafeCall() {
-    this.activityService.getCafeByParis().toPromise().then((data:any) =>{
+      this.activityService.getCafeByParis().toPromise().then((data:any) =>{
       this.parisCafe = data.results;
+      console.log(data);
+    })
+  }
+
+  parisZooCall() {
+      this.activityService.getZooByParis().toPromise().then((data:any) =>{
+      this.parisZoo = data.results;
+    console.log(data);
+    })
+  }
+
+  parisMuesumCall() {
+      this.activityService.getMuseumByParis().toPromise().then((data:any) =>{
+      this.parisMuseum = data.results;
+      console.log(data);
+    })
+  }
+
+  parisAttractCall() {
+      this.activityService.getAttractByParis().toPromise().then((data:any) =>{
+      this.parisAttract = data.results;
       console.log(data);
     })
   }
