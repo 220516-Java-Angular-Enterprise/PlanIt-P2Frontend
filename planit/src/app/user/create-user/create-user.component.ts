@@ -37,7 +37,7 @@ export class CreateUserComponent implements OnInit {
     this.userService.postNewUser(newuserRegistration).subscribe((newUser)=>
     (console.log(newUser)));
 
-    this.router.navigateByUrl(`/`);
+    this.router.navigateByUrl('/homepage');
 
   }
 }
