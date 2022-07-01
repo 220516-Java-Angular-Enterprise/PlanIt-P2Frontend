@@ -32,18 +32,11 @@ import { ParisAttractHomepageComponent } from './common/parisHomepage/attractHom
 import { ParisCafeHomepageComponent } from './common/parisHomepage/cafeHomepage/parisCafeHomepage.component';
 import { ParisMuseumHomepageComponent } from './common/parisHomepage/museumHomepage/parisMuseumHomepage.component';
 import { ParisZooHomepageComponent } from './common/parisHomepage/zooHomepage/parisZooHomepage.component';
-import { BarcelonaAttractComponent } from './common/barcelona/barcelonaAttract/barcelonaAttract.component';
-import { BarcelonaAttractHomePageComponent } from './common/barcelonaHomepage/attractHomepage/barcelonaattractHomepage.component';
-import { BarcelonaCafeComponent } from './common/barcelona/barcelonaCafe/barcelonaCafe.component';
-import { BarcelonaCafeHomePageComponent } from './common/barcelonaHomepage/cafeHomepage/barcelonacafeHomepage.component';
-import { BarcelonaMuseumComponent } from './common/barcelona/barcelonaMuseum/barcelonaMuseum.component';
-import { BarcelonaMuseumHomePageComponent } from './common/barcelonaHomepage/museumHomepage/barcelonamuseumHomepage.component';
-import { BarcelonaZooComponent } from './common/barcelona/barcelonaZoo/barcelonaZoo.component';
-import { BarcelonaZooHomePageComponent } from './common/barcelonaHomepage/zooHomepage/barcelonazooHomepage.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
 import { QuizComponent } from './common/quiz/quiz/quiz.component';
 
 
+// 
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,14 +60,6 @@ import { QuizComponent } from './common/quiz/quiz/quiz.component';
     ParisCafeHomepageComponent, 
     ParisMuseumHomepageComponent,
     ParisZooHomepageComponent,
-    BarcelonaAttractComponent,
-    BarcelonaAttractHomePageComponent,
-    BarcelonaCafeComponent,
-    BarcelonaCafeHomePageComponent,
-    BarcelonaMuseumComponent,
-    BarcelonaMuseumHomePageComponent,
-    BarcelonaZooComponent,
-    BarcelonaZooHomePageComponent
     CreateUserComponent,
     QuizComponent
   ],

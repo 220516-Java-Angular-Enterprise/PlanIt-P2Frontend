@@ -34,11 +34,5 @@ barcelonaUrl='https://hotels4.p.rapidapi.com/locations/v2/search?query=barcelona
   }
 
   // Get hotels using different Urls
-
-  //Barcelona 
-
-  getHotelBarcelona():Observable<Hotel[]>{
-    return this.http.get<Hotel[]>(this.barcelonaUrl,this.options)
-  }
   }
 
