@@ -8,6 +8,7 @@ import { HotelComponent } from './trip/hotel/hotel.component';
 import { TripCreateComponent } from './trip/trip-create/trip-create.component';
 import { TripDetailComponent } from './trip/trip-detail/trip-detail.component';
 import { TripListComponent } from './trip/trip-list/trip-list.component';
+import { QuizComponent } from './common/quiz/quiz.component';
 
 
 // Will need to add routes in here for pages
@@ -43,6 +44,10 @@ const routes: Routes = [
   {
     path: 'trip/hotel',
     component: HotelComponent
+  },
+  {
+    path: 'quiz',
+    component: QuizComponent
   }
 ];
 

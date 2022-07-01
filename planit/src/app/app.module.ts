@@ -24,6 +24,7 @@ import { environment } from 'src/environments/environment';
 import { AuthComponent } from './user/auth/auth.component';
 import { HptripsearchComponent } from './common/hptripsearch/hptripsearch.component';
 import { HotelComponent } from './trip/hotel/hotel.component';
+import { QuizComponent } from './common/quiz/quiz.component';
 
 // 
 @NgModule({
@@ -40,7 +41,8 @@ import { HotelComponent } from './trip/hotel/hotel.component';
     TripListComponent,
     AuthComponent,
     HptripsearchComponent,
-    HotelComponent
+    HotelComponent,
+    QuizComponent
   ],
   imports: [
     AuthModule.forRoot({
