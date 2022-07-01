@@ -7,6 +7,7 @@ import { ParisAttractHomepageComponent } from './common/parisHomepage/attractHom
 import { ParisCafeHomepageComponent } from './common/parisHomepage/cafeHomepage/parisCafeHomepage.component';
 import { ParisMuseumHomepageComponent } from './common/parisHomepage/museumHomepage/parisMuseumHomepage.component';
 import { ParisZooHomepageComponent } from './common/parisHomepage/zooHomepage/parisZooHomepage.component';
+import { QuizComponent } from './common/quiz/quiz/quiz.component';
 import { SignupComponent } from './common/signup/signup.component';
 import { HotelComponent } from './trip/hotel/hotel.component';
 import { TripCreateComponent } from './trip/trip-create/trip-create.component';
@@ -69,6 +70,10 @@ const routes: Routes = [
   {
     path: 'create-account/:email',
     component: CreateUserComponent
+  },
+  {
+    path: 'quiz',
+    component: QuizComponent
   }
 ];
 

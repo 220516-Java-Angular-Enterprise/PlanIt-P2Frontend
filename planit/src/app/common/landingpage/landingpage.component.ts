@@ -22,7 +22,7 @@ export class LandingpageComponent implements OnInit {
 
   logIn(): void {
     this.auth.loginWithRedirect({
-        appState: { target: '/homepage' }
+        appState: { target: '/quiz' }
       });
   }
 

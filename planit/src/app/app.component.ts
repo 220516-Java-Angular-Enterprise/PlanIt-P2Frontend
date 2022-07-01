@@ -36,7 +36,7 @@ export class AppComponent {
           if(this.user == null){
             this.goToCreateAccount(this.email);
           }else{
-            this.router.navigateByUrl('/homepage');
+            this.router.navigateByUrl('/quiz');
           }
           })
         })

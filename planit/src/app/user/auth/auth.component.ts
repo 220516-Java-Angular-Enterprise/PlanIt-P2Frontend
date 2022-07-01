@@ -30,7 +30,7 @@ export class AuthComponent implements OnInit {
 
   logIn(): void {
     this.auth.loginWithRedirect({
-        appState: { target: '/homepage' }
+        appState: { target: '/quiz' }
       });
       this.userService
   }

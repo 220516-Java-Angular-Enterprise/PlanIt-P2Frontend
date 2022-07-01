@@ -33,6 +33,7 @@ import { ParisCafeHomepageComponent } from './common/parisHomepage/cafeHomepage/
 import { ParisMuseumHomepageComponent } from './common/parisHomepage/museumHomepage/parisMuseumHomepage.component';
 import { ParisZooHomepageComponent } from './common/parisHomepage/zooHomepage/parisZooHomepage.component';
 import { CreateUserComponent } from './user/create-user/create-user.component';
+import { QuizComponent } from './common/quiz/quiz/quiz.component';
 
 
 // 
@@ -59,7 +60,8 @@ import { CreateUserComponent } from './user/create-user/create-user.component';
     ParisCafeHomepageComponent, 
     ParisMuseumHomepageComponent,
     ParisZooHomepageComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    QuizComponent
   ],
   imports: [
     AuthModule.forRoot({
