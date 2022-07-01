@@ -40,10 +40,10 @@ import { BarcelonaMuseumComponent } from './common/barcelona/barcelonaMuseum/bar
 import { BarcelonaMuseumHomePageComponent } from './common/barcelonaHomepage/museumHomepage/barcelonamuseumHomepage.component';
 import { BarcelonaZooComponent } from './common/barcelona/barcelonaZoo/barcelonaZoo.component';
 import { BarcelonaZooHomePageComponent } from './common/barcelonaHomepage/zooHomepage/barcelonazooHomepage.component';
+import { CreateUserComponent } from './user/create-user/create-user.component';
+import { QuizComponent } from './common/quiz/quiz/quiz.component';
 
 
-
-// 
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,7 +75,8 @@ import { BarcelonaZooHomePageComponent } from './common/barcelonaHomepage/zooHom
     BarcelonaMuseumHomePageComponent,
     BarcelonaZooComponent,
     BarcelonaZooHomePageComponent
-  
+    CreateUserComponent,
+    QuizComponent
   ],
   imports: [
     AuthModule.forRoot({

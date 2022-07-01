@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
+import { User } from 'src/app/models/users';
+import { UserService } from 'src/app/services/user/user.service';
 
 @Component({
   selector: 'app-landingpage',
@@ -20,12 +22,12 @@ export class LandingpageComponent implements OnInit {
 
   logIn(): void {
     this.auth.loginWithRedirect({
-        appState: { target: '/homepage' }
+        appState: { target: '/quiz' }
       });
   }
 
   logOut(): void {
-    this.auth.logout();
+    this.auth.logout();  
   }
 
 }

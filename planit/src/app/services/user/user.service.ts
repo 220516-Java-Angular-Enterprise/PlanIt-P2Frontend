@@ -1,7 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '@auth0/auth0-angular';
-import { firstValueFrom } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
+import { AutomatedNewUser } from 'src/app/models/automatednewuser';
+import { NewUserRegistrationClass } from 'src/app/models/newuserRegistrationclass';
 
 @Injectable({
   providedIn: 'root'
@@ -32,5 +34,18 @@ export class UserService {
   // need to see how auth talks to db
   createNewUser(user: User) {
     return firstValueFrom(this.http.post(this.userURL, user));
+  }
+
+  getUsersByEmail(email?: string): Observable<User>{
+    return this.http.get<User>(this.userURL + '/get-by-email/' + email)
+  }
+
+  postNewAutomatedUser(newUserToRegister: AutomatedNewUser){
+    return this.http.post<any>(this.userURL, newUserToRegister);
+  }
+
+  postNewUser(newUserToRegister: NewUserRegistrationClass):Observable<NewUserRegistrationClass>{
+    console.log(newUserToRegister);
+    return this.http.post<any>(this.userURL,newUserToRegister);
   }
 }

@@ -1,0 +1,114 @@
+
+
+article {
+   width: 960px;
+   text-align: left;
+   background: #839791;
+   padding: 20px;
+   overflow: auto;
+}
+
+h2 {
+   font-weight: bold;
+   font-size: 30px;
+   text-align: center;
+   width: 66.6667%;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 20px;
+    color: #283618;
+    text-decoration: none;
+}
+
+.pariscafe li{
+    text-decoration: none;
+    color: #283618;
+    border: none;
+    cursor: pointer;
+}
+
+form {
+   padding: 11px;
+   width: 66%;
+   float: center;
+}
+
+fieldset {
+   margin-bottom: 1px;
+   position: relative;
+   padding: 2.5em 1em 0.5em 1em;
+   background: #AAC0AF;
+}
+
+fieldset fieldset {
+   padding-top: 15px;
+}
+
+legend, #submit, #instrlabel {
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+}
+
+legend {
+   position: absolute;
+   top: 0;
+   left: 0;
+   font-size: 1.25em;
+   margin-top: 0.5em;
+   margin-left: 0.5em;
+}
+
+fieldset fieldset legend {
+   font-size: 1em;
+   margin-top: 25px;
+   top: -30px;
+   left: 8px;
+}
+
+input, textarea {
+   font-size: 1em;
+}
+
+
+section {
+   float: right;
+   width: 33.3333%;
+   background: #FEFAE0;
+   border: 3px solid #FEFAE0;
+   margin-top: 10px;
+   display: none;
+}
+
+section h2 {
+   width: 100%;
+   background: #FEFAE0;
+   padding: 5px;
+}
+
+section div {
+   margin-left: 20px;
+   display: none;
+   padding: 10px;
+}
+
+section div p {
+   margin-bottom: 5px;
+}
+
+section div p span {
+   font-weight: bold;
+}
+
+section li {
+   list-style-type: none;
+   margin-left: 20px;
+}
+h3 {
+    font-family: arial, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+ }
