@@ -45,10 +45,6 @@ const routes: Routes = [
     path: 'trip/hotel',
     component: HotelComponent
   },
-  {
-    path: 'create-account/:email',
-    component: CreateUserComponent
-  }
 ];
 
 
