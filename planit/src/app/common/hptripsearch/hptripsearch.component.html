@@ -4,12 +4,133 @@
     <img id="map" src="../../../assets/images/map.png">
         <div class="card-deck row">
         <div class="card">
+          <!-- paris cards for cafe -->
+        <div *ngIf="parisHotel" >
           <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
           <div class="card-body">
-            <h5 class="card-title card-header">Card title</h5>
-            <p class="card-text" data-spy="scroll" data-target="#card-text" data-offset="0">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <h5 class="card-title card-header">{{parisHotel[0].group}}</h5>
+            <p class="card-text" data-spy="scroll" data-target="#card-text" data-offset="0">
+              City: {{parisHotel[0].entities[0].name}}
+              <br>
+              City Group Hotel is a haven of style and elegance in one of Paris’s most 
+              sophisticated neighborhoods. Flooded with natural light from the 
+              glass ceiling, the lobby lounge sets the tone with polished tile floors, 
+              colorful seating, and a large-scale Art Deco print. After check-in, enjoy a 
+              glass of Champagne in the high-ceilinged bar area, or stroll outside to the 
+              hotel's hidden gem: a beautiful cobbled garden that is one of the largest in Paris, 
+              complete with vintage streetlights, palm trees, and secluded corners. Inside, beautifully decorated 
+              guestrooms come with superb amenities, including a private cinema and well-equipped fitness center.
+            </p>
           </div>
         </div>
+        </div>
+        <div class="card">
+          <div *ngIf="parisCafe" >
+            <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title card-header">{{parisCafe[0].name}}</h5>
+            <p class="card-text">
+              Address: {{parisCafe[0].address}}
+              <br>
+              Phone Number: {{parisCafe[0].phone_number}}
+              <br>
+              Website: {{parisCafe[0].website}}
+            </p>
+          </div>
+        </div>
+        </div>
+                                     <!-- Barcelona cards for cafe -->
+        <section class="barcelona cards">
+          <div class="container">
+              <img id="map" src="../../../assets/images/map.png">
+                  <div class="card-deck row">
+                  <div class="card">
+                    <!-- paris cards for cafe -->
+                  <div *ngIf="barcelonaHotel" >
+                    <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{barcelonaHotel[0].group}}</h5>
+                      <p class="card-text" data-spy="scroll" data-target="#card-text" data-offset="0">
+                        City: {{barcelonaHotel[0].entities[0].name}}
+                        <br>
+             Hotel Condes Barcelona occupies a 19th-century building on Passeig de Gracia with a seasonal rooftop pool and terrace. It features a gym and a sauna.
+            The soundproofed rooms at Condes de Barcelona Hotel are air conditioned, LCD satellite TV and laptop safe.
+           They have views of Passeig de Gracia or a pretty Eixample courtyard, and some rooms include a small balcony.
+          The hotel has an elegant rooftop bar.
+          This is our guests' favorite part of Barcelona, according to independent reviews.
+          Couples in particular like the location
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="card">
+                    <div *ngIf="barcelonaCafe" >
+                      <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{barcelonaCafe[0].name}}</h5>
+                      <p class="card-text">
+                        Address: {{barcelonaCafe[0].address}}
+                        <br>
+                        Phone Number: {{barcelonaCafe[0].phone_number}}
+                        <br>
+                        Website: {{barcelonaCafe[0].website}}
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                  
+                  <!-- Barcelona cards for the zoo -->
+                  <div class="card">
+                    <div *ngIf="barcelonaZoo" >
+                      <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{barcelonaZoo[0].name}}</h5>
+                      <p class="card-text">
+                        Address: {{barcelonaZoo[0].address}}
+                        <br>
+                        Phone Number: {{barcelonaZoo[0].phone_number}}
+                        <br>
+                        Website: {{barcelonaZoo[0].website}}
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+
+                   <!-- Barcelona cards for the Museum -->
+                   <div class="card">
+                    <div *ngIf="barcelonaMuseum" >
+                      <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{barcelonaMuseum[0].name}}</h5>
+                      <p class="card-text">
+                        Address: {{barcelonaMuseum[0].address}}
+                        <br>
+                        Phone Number: {{barcelonaMuseum[0].phone_number}}
+                        <br>
+                        Website: {{barcelonaMuseum[0].website}}
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+                   <!-- Barcelona cards for the Tourist Attraction -->
+                   <div class="card">
+                    <div *ngIf="barcelonaAttract" >
+                      <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title card-header">{{barcelonaAttract[0].name}}</h5>
+                      <p class="card-text">
+                        Address: {{barcelonaAttract[0].address}}
+                        <br>
+                        Phone Number: {{barcelonaAttract[0].phone_number}}
+                        <br>
+                        Website: {{barcelonaAttract[0].website}}
+                      </p>
+                    </div>
+                  </div>
+                  </div>
+
+
+
         <div class="card">
           <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
           <div class="card-body">
@@ -27,31 +148,8 @@
       </div>
     </div>
   </section>
-       
 
-
-    <!--Hotel Card-->
-    <!-- <p> Hotels</p>
-    <div *ngFor="let trip of trips"(click)="goToTripId">
-    <div class="card">
-        <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title card-header">{{trip.id}}</h5>
-          <p class="card-text"  data-spy="scroll" data-target="#card-text" data-offset="0">{{trip.hotel}}</p>
-        </div>
-      </div>
-  </div> 
- <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-  <p>Hotels</p>
-    <div class="card col">
-      <img class="card-img-top" src="../../../assets/images/PlanIt_Logo (1).png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title card-header">{{hotel[0].entities}}</h5>
-        <p class="card-text" data-spy="scroll" data-target="#card-text" data-offset="0">
-        </p>
-      </div>
-    </div>
-  </div> -->
+  <!-- Next city cards (need to copy full section above and change info) -->
 
 <!-- dashboard section -->
 <div class="album py-5 bg-light dashboard">

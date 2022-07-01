@@ -21,14 +21,21 @@ export class HptripsearchComponent implements OnInit {
   constructor(private tripService: TripService, private activityService: ActivityService,private hotelService:HotelService, private router: Router, private auth: AuthService) { }
 
   trips: Trip[] = [];
-  user: any = {};
   activities: any = {};
-  activity: Activity[] = [];
   hotel: any = {};
-  lat: string = "";
-  long: string = "";
+  parisHotel: any = {};
+  parisCafe: any = {};
+  parisZoo: any = {};
+  parisMuseum: any = {};
+  parisAttract: any = {}
+  barcelonaHotel: any = {};
+  barcelonaCafe: any = {};
+  barcelonaZoo: any = {};
+  barcelonaMuseum: any = {};
+  barcelonaAttract: any = {}
 
   async ngOnInit() {
+
 
 
        //trying to put the hotel in the cards
@@ -70,10 +77,28 @@ export class HptripsearchComponent implements OnInit {
          //Tourist Attraction
       await this.activityService.getTouristByBarcelona().toPromise().then((data:any) =>{
           this.activities = data.results;
-          console.log(data);
+          console.log(data);})
+
+    // Paris URLs
+    await this.activityService.getCafeByParis().toPromise().then((data:any) =>{
+      this.parisCafe = data.results;
+      console.log(data);
     })
 
-    console.log(this.activities);
+    await this.activityService.getZooByParis().toPromise().then((data:any) =>{
+      this.parisZoo = data.results;
+      console.log(data);
+    })
+
+    await this.activityService.getMuseumByParis().toPromise().then((data:any) =>{
+      this.parisMuseum = data.results;
+      console.log(data);
+    })
+
+    await this.activityService.getAttractByParis().toPromise().then((data:any) =>{
+      this.parisAttract = data.results;
+      console.log(data);
+    })
 
     await this.tripService.getAllTrips().then(t => {
       this.trips = t;
@@ -84,6 +109,13 @@ export class HptripsearchComponent implements OnInit {
 
   goToTripId(id: string) {
     this.router.navigateByUrl(`trips/${id}`)
+  }
+
+  parisCafeCall() {
+    this.activityService.getCafeByParis().toPromise().then((data:any) =>{
+      this.parisCafe = data.results;
+      console.log(data);
+    })
   }
 
 }
