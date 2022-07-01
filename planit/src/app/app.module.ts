@@ -24,6 +24,15 @@ import { environment } from 'src/environments/environment';
 import { AuthComponent } from './user/auth/auth.component';
 import { HptripsearchComponent } from './common/hptripsearch/hptripsearch.component';
 import { HotelComponent } from './trip/hotel/hotel.component';
+import { ParisCafeComponent } from './common/paris/parisCafe/parisCafe.component';
+import { ParisAttractComponent } from './common/paris/parisAttract/parisAttract.component';
+import { ParisMuseumComponent } from './common/paris/parisMuseum/parisMuseum.component';
+import { ParisZooComponent } from './common/paris/parisZoo/parisZoo.component';
+import { ParisAttractHomepageComponent } from './common/parisHomepage/attractHomepage/parisAttractHomepage.component';
+import { ParisCafeHomepageComponent } from './common/parisHomepage/cafeHomepage/parisCafeHomepage.component';
+import { ParisMuseumHomepageComponent } from './common/parisHomepage/museumHomepage/parisMuseumHomepage.component';
+import { ParisZooHomepageComponent } from './common/parisHomepage/zooHomepage/parisZooHomepage.component';
+
 
 // 
 @NgModule({
@@ -40,7 +49,15 @@ import { HotelComponent } from './trip/hotel/hotel.component';
     TripListComponent,
     AuthComponent,
     HptripsearchComponent,
-    HotelComponent
+    HotelComponent,
+    ParisCafeComponent,
+    ParisAttractComponent,
+    ParisMuseumComponent,
+    ParisZooComponent,
+    ParisAttractHomepageComponent,
+    ParisCafeHomepageComponent, 
+    ParisMuseumHomepageComponent,
+    ParisZooHomepageComponent
   ],
   imports: [
     AuthModule.forRoot({
