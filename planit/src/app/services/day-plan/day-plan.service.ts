@@ -13,7 +13,10 @@ export class DayPlanService {
 
   // backendHeader = new HttpHeaders().set('Access-Control-Allow-Origin', '*')
 
+
+
   private planURL = "http://planitproject2-env.eba-tguhtqck.us-east-2.elasticbeanstalk.com/planit/trips";
+
 
   getAllTrips(): Promise<Plans[]> {
     return firstValueFrom(this.http.get<Plans[]>(this.planURL));

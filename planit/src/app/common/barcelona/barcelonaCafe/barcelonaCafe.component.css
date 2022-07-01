@@ -1,0 +1,66 @@
+#map {
+    position: absolute;
+    object-fit: cover;
+    left: 0;
+    width: 100%;
+    opacity: 0.5;
+    padding: 0px;
+    z-index: -1;
+    height: 30rem;
+  }
+
+.dashboardContainer {
+    width: 100%;
+    display: flex;
+    
+}
+
+.card-deck {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    border: 3px solid black;
+    width: 18rem; 
+    height: 25rem;
+    margin-top: 25px;
+}
+
+.card-img-top {
+    margin-top: 5px;
+    border: 2px solid gray;
+}
+
+.card-text {
+    height: 10rem;
+    overflow-y: scroll;
+}
+
+.py-5 {
+    margin-top: 20px;
+    padding-top: 3rem;
+    margin-bottom: 0px;
+}
+
+.album {
+    margin-bottom: 0px;
+    height: 430px;
+}
+
+.tab-content {
+    height: 330px;
+    overflow-y: scroll;
+}
+
+li, a, button {
+    font-weight: 500;
+    font-size: 20px;
+    color: #283618;
+    text-decoration: none;
+}
+
+button:hover {
+    transform: translate(0, -5px);
+    color: #283618;
+  }

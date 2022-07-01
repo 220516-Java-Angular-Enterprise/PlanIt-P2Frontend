@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BarcelonaAttractHomePageComponent } from './common/barcelonaHomepage/attractHomepage/barcelonaattractHomepage.component';
+import { BarcelonaCafeHomePageComponent } from './common/barcelonaHomepage/cafeHomepage/barcelonacafeHomepage.component';
+import { BarcelonaMuseumHomePageComponent } from './common/barcelonaHomepage/museumHomepage/barcelonamuseumHomepage.component';
+import { BarcelonaZooHomePageComponent } from './common/barcelonaHomepage/zooHomepage/barcelonazooHomepage.component';
 import { HomepageComponent } from './common/homepage/homepage.component';
 import { LandingpageComponent } from './common/landingpage/landingpage.component';
 import { LoginComponent } from './common/login/login.component';
@@ -68,6 +72,21 @@ const routes: Routes = [
     component: ParisMuseumHomepageComponent
   },
   {
+    path: 'barcelonacafe',
+    component: BarcelonaCafeHomePageComponent
+  },
+  {
+    path: 'barcelonazoo',
+    component: BarcelonaZooHomePageComponent
+  },
+  {
+    path: 'barcelonaattract',
+    component: BarcelonaAttractHomePageComponent 
+  },
+  {
+    path: 'barcelonamuseum',
+    component: BarcelonaMuseumHomePageComponent 
+  },
     path: 'create-account/:email',
     component: CreateUserComponent
   },
